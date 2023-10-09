@@ -1,0 +1,83 @@
+    1                                                                                                          
+    2  1s/e
+    3   ls
+    4  cd
+    5  cmd
+    6  cd
+    7  ls
+    8  cd/hjz
+    9  mkdir hjz
+   10  cd/hjz
+   11  cd hjz/
+   12  ls /c
+   13  ls
+   14  cd/
+   15  mddir/
+   16  mkdir
+   17  mkdir/hjz
+   18  ls/c
+   19  ls /c
+   20  cd hjz
+   21  mkdir/hjz
+   22  cd /hjz/
+   23  mkdir/hjz/
+   24  cd /
+   25   ls
+   26  mkdir hjz
+   27  cd hjz
+   28  mkdir hjz
+   29  cd hjz
+   30  /d
+   31  cd hjz/
+   32  cd hjz
+   33  ls
+   34  n
+   35  cd hjz
+   36  mkdir hjz
+   37  cd hjz
+   38  cp/d/book
+   39  cp/d/book
+   40  cp /d/book .-r
+   41  cd hjz
+   42  cp /d/book.-r
+   43  mkdir hjz
+   44  cd hjz
+   45  cp /d/book.-r
+   46  cp /d/book
+   47  cp /c/book
+   48  cp /d/book.-r
+   49  ls
+   50  /d
+   51  cp/d/book.-r
+   52  cp /d/book.-r
+   53  ls
+   54  cp hjz/
+   55  cd hjz/
+   56  cp /d/hjz.-r
+   57  mkdir huang
+   58  cd huang
+   59  cp /d/book . -r
+   60  ls
+   61  cp /d/book . -r
+   62  cp /d/book .-r
+   63  cp /d/book .-r
+   64  /d
+   65  cp /d
+   66  cp /d/book .-r
+   67  cp /d/book/ . -r
+   68  cp /d/book/* .
+   69  cp /d/book . -r
+   70  cd
+   71  cd /huang/
+   72  cd /
+   73  cd /huang/
+   74  cd /huang
+   75  cd /d/huang/
+   76  cp /d/book . -r
+   77  history
+   78  history >
+   79  history>
+   80  histroy >
+   81   history >
+   82  history > huang.txt
+   83  history > huang.txt
