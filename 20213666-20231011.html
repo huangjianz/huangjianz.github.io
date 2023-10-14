@@ -1,120 +1,41 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>视频播放器</title>
+    <meta charset="UTF-8">
+    <title>JavaWebHomework5</title>
 </head>
-<style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-
-  h2 {
-    position: absolute;
-    transform: translateX(-50%);
-    left:50%;
-    bottom: 88vh; 
-    font-size: 40px;
-   }
-
-  .video-container {
-    margin-top: 70px;
-    width: 800px;
-    height: 450px;
-  }
-
-  video {
-    width: 100%;
-    height: 100%;
-  }
-
-  #custom-button1,
-  #custom-button2,
-  #play-pause-button,
-  #random-play-button {
-    position: absolute;
-    bottom: 20vh;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    background-color: #ccc;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-
-  #custom-button1 {
-    left: 35%;
-  }
-
-  #custom-button2 {
-    left: 55%;
-  }
-
-  #play-pause-button {
-    left: 45%;
-  }
-
-  #random-play-button {
-    left: 72.5%;
-  }
-</style>
-
 <body>
-  <h2>VideoPlayer</h2>
-  <div class="video-container">
-    <video id="myVideo" controls>
-      <source src="逗八哥狗.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-  <button id="custom-button1" onclick="previous()">上一集</button>
-  <button id="play-pause-button">播放</button>
-  <button id="custom-button2" onclick="next()">下一集</button>
-  <button id="random-play-button">随机播放</button>
-
-  <script>
-    var videos = ['逗八哥狗.mp4'];
-
-    var videoIndex = 0;
-    var videoElement = document.getElementById('myVideo');
-    var playPauseButton = document.getElementById('play-pause-button');
-    videoElement.src = videos[videoIndex];
-    var randomPlayButton = document.getElementById('random-play-button');
-
-    function previous() {
-      if (videoIndex > 0) {
-        videoIndex--;
-        videoElement.src = videos[videoIndex];
-      }
-    }
-    function next() {
-      if (videoIndex < videos.length - 1) {
-        videoIndex++;
-        videoElement.src = videos[videoIndex];
-      }
-    }
-    function togglePlayPause() {
-      if (videoElement.paused) {
-        videoElement.play();
-        playPauseButton.innerHTML = '暂停';
-      } else {
-        videoElement.pause();
-        playPauseButton.innerHTML = '播放';
-      }
-    }
-    function playRandomVideo() {
-      videoElement.pause();
-      videoIndex = Math.floor(Math.random() * videos.length);
-      videoElement.src = videos[videoIndex];
-      videoElement.play();
-    }
-
-    randomPlayButton.addEventListener('click', playRandomVideo);
-    playPauseButton.addEventListener('click', togglePlayPause);
-  </script>
+<video id = "myVideo" controls></video>
+<div>
+    <button id = "play">Play</button>
+    <button id = "pause">Pause</button>
+    <button id = "next">Next</button>
+</div>
 </body>
+<script>
+    //视频数组对象
+    var myVideos = ["逗八哥狗.mp4"];
+    //视屏数组对象的控制变量
+    var i = 0;
+    //获取视频元素
+    var video = document.getElementById("myVideo");
+    video.src ="../video0/"+myVideos[0];
+
+    //播放按钮
+    document.getElementById("play").onclick = function () {
+        video.play();
+    };
+    //暂停按钮
+    document.getElementById("pause").onclick = function () {
+        video.pause();
+    };
+    //跳转到下一条视频
+    document.getElementById("next").onclick = function () {
+        i++;
+        if(i==myVideos.length){
+            i=0;
+        }
+        video.src ="../video0/"+myVideos[i];
+    };
+</script>
 </html>
